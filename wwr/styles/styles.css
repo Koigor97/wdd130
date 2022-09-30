@@ -1,0 +1,77 @@
+/* ----setting the a max-width for our page ------ */
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* -----applying center alignment to the following selectors */
+nav a, #hero-msg, .button-box, main {
+    text-align: center;
+}
+/* ------------------------------------------------------------ */
+#background {
+    height: 725px;
+    background-color: #063310;
+}
+
+#hero-img {
+    width: 100%;
+}
+/* ------------------applying background colors to the following selectors ----------------- */
+body {
+    background-color:#E6E6D4;
+    color: #333333;
+}
+
+
+header {
+    background-color: #063310;
+    
+}
+
+a {
+    color: #E6E6D4;
+    text-decoration: none;
+}
+
+.copywright {
+    color: #E6E6D4;
+}
+
+.home-title, h4, h2 {
+    color: #74C1E3;
+}
+
+.logo, .icon {
+    width: 80px;
+}
+/* for the nav background hover color, I used the same background color
+but reduced the opacity a bit */
+nav a:hover, footer a:hover {
+    background-color: #0633108f;
+    color: white;
+}
+
+.book, .join {
+    color: #EAF6F6;
+    background-color: #FDC52D;
+}
+
+.book:hover, .join:hover {
+    background-color: #f7bf2593;
+    color: black;
+}
+
+footer {
+    background-color: #063310;
+}
+
+footer p {
+    font-size: 1.2em;
+}
+
+footer a:hover {
+    background-color: #0633108f;
+    color: white;
+    text-decoration: underline;
+}
