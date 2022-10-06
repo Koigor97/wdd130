@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Macondo&display=swap');
+
 /* ----setting the a max-width for our page ------ */
 #content {
     max-width: 1600px;
     margin: 0 auto;
+}
+
+#logo_link {
+    padding-top: 5px;
 }
 
 /* -----applying center alignment to the following selectors */
@@ -21,6 +27,10 @@ nav a, #hero-msg, .button-box, main {
 body {
     background-color:#E6E6D4;
     color: #333333;
+    font-family: "lato", Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -29,21 +39,57 @@ header {
     
 }
 
+nav a {
+    padding: 35px;
+}
+
 a {
     color: #E6E6D4;
     text-decoration: none;
+}
+
+h2 {
+    margin: 0;
+}
+
+main section img {
+    box-sizing: border-box;
 }
 
 .copywright {
     color: #E6E6D4;
 }
 
-.home-title, h4, h2 {
+.home-title, h2 {
     color: #74C1E3;
+    font-family: "Macondo", Brush Script MT, Trebuchet MS;
+}
+
+ h4 {
+    color: #74C1E3;
+ }
+
+.home-title {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+.msg{
+    padding: 35px;
+}
+
+.msg p {
+    font-size: 18px;
+    line-height: 1.5em;
+    padding-bottom: 15px;
 }
 
 .logo, .icon {
     width: 80px;
+}
+
+.icon {
+    padding-top: 10px;
 }
 /* for the nav background hover color, I used the same background color
 but reduced the opacity a bit */
@@ -55,6 +101,10 @@ nav a:hover, footer a:hover {
 .book, .join {
     color: #EAF6F6;
     background-color: #FDC52D;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
 }
 
 .book:hover, .join:hover {
@@ -64,6 +114,8 @@ nav a:hover, footer a:hover {
 
 footer {
     background-color: #063310;
+    padding: 25px 50px;
+    margin-top: 200px;
 }
 
 footer p {
@@ -74,4 +126,16 @@ footer a:hover {
     background-color: #0633108f;
     color: white;
     text-decoration: underline;
+}
+
+footer .social img {
+    padding-top: 15px;
+}
+
+.rivers-card, .camping-card, .rapids-card {
+    margin: 200px 0;
+}
+
+.card-img {
+    border: 10px solid #FDC52D;
 }
