@@ -8,6 +8,8 @@
 
 #logo_link {
     padding-top: 5px;
+    justify-self: center;
+    align-self: center;
 }
 
 /* -----applying center alignment to the following selectors */
@@ -15,9 +17,24 @@ nav a, #hero-msg, .button-box, main {
     text-align: center;
 }
 /* ------------------------------------------------------------ */
-#background {
-    height: 725px;
-    background-color: #063310;
+
+
+#hero {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top: -100px;
+}
+
+#hero-box {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    z-index: -1;
+}
+
+#hero-msg {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-top: 150px;
 }
 
 #hero-img {
@@ -35,21 +52,69 @@ body {
 
 
 header {
-    background-color: #063310;
+    background-color: #0633102e;
+    display: grid;
+    grid-template-columns: 150px auto;
     
 }
 
 nav a {
     padding: 35px;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
 }
 
 a {
     color: #E6E6D4;
     text-decoration: none;
+    
+}
+
+/* ---------------------------- Main Section Layout -------------------------------- */
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.card-img, .mountains {
+    width: 100%;
+}
+
+.rivers-card {
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+
+.camping-card {
+    grid-column: 5/7;
+    grid-row: 2/3;
+}
+
+.rapids-card {
+    grid-column: 8/10;
+    grid-row: 2/3;
+}
+
+.mountains {
+    grid-column: 2/7;
+    grid-row: 5/8;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+
+#background {
+    height: 725px;
+    background-color: #063310;
+    grid-column: 1/11;
+    grid-row: 4/9
 }
 
 h2 {
     margin: 0;
+    
 }
 
 main section img {
@@ -65,17 +130,21 @@ main section img {
     font-family: "Macondo", Brush Script MT, Trebuchet MS;
 }
 
- h4 {
-    color: #74C1E3;
+ h4, .home-title {
+    color: #089fe0;
  }
 
 .home-title {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-top: 10px;
 }
 
 .msg{
+    background-color:#E6E6D4;
     padding: 35px;
+    grid-column: 6/10;
+    grid-row: 6/7;
+    box-shadow: 5px 5px 10px #6f7364;
 }
 
 .msg p {
@@ -94,7 +163,7 @@ main section img {
 /* for the nav background hover color, I used the same background color
 but reduced the opacity a bit */
 nav a:hover, footer a:hover {
-    background-color: #0633108f;
+    background-color: #089fe0;
     color: white;
 }
 
@@ -116,6 +185,9 @@ footer {
     background-color: #063310;
     padding: 25px 50px;
     margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 footer p {
@@ -138,4 +210,54 @@ footer .social img {
 
 .card-img {
     border: 10px solid #FDC52D;
+    transition: transform .5s;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+
+.card-img:hover {
+    opacity: .6;
+    transform: scale(1.1);
+}
+
+
+@media screen and (max-width: 900px) {
+    #hero, .home-grid {
+        display: block;
+        height: auto;
+    }
+    nav, footer {
+        flex-direction: column;
+    }
+    nav a {
+        display: block;
+        padding: 15px;
+    }
+    #hero {
+        margin-top: 0;
+    }
+    #hero-msg {
+        margin-top: 0;
+    }
+    #hero-msg h4 {
+        display: none;
+    }
+    .home-title {
+        font-size: 25px;
+        color: #6f7364;
+    }
+    .rivers-card, .camping-card, .rapids-card { 
+        margin: 50px auto;
+        width: 60%;
+    }
+    #background {
+        display: none;
+    }
+    .mountains, .msg {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+    footer {
+        margin-top: 25px;
+    }
 }
