@@ -13,9 +13,13 @@
 }
 
 /* -----applying center alignment to the following selectors */
-nav a, #hero-msg, .button-box, main {
+nav a,
+#hero-msg,
+.button-box,
+main {
     text-align: center;
 }
+
 /* ------------------------------------------------------------ */
 
 
@@ -40,9 +44,10 @@ nav a, #hero-msg, .button-box, main {
 #hero-img {
     width: 100%;
 }
+
 /* ------------------applying background colors to the following selectors ----------------- */
 body {
-    background-color:#E6E6D4;
+    background-color: #E6E6D4;
     color: #333333;
     font-family: "lato", Arial, Helvetica, sans-serif;
     font-size: 22px;
@@ -55,15 +60,15 @@ header {
     background-color: #0633102e;
     display: grid;
     grid-template-columns: 150px auto;
-    
+
 }
 
 nav a {
     padding: 35px;
-    
+
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-around;
 }
@@ -71,7 +76,7 @@ nav{
 a {
     color: #E6E6D4;
     text-decoration: none;
-    
+
 }
 
 /* ---------------------------- Main Section Layout -------------------------------- */
@@ -80,7 +85,8 @@ a {
     grid-template-columns: repeat(10, 1fr);
 }
 
-.card-img, .mountains {
+.card-img,
+.mountains {
     width: 100%;
 }
 
@@ -114,7 +120,7 @@ a {
 
 h2 {
     margin: 0;
-    
+
 }
 
 main section img {
@@ -125,22 +131,28 @@ main section img {
     color: #E6E6D4;
 }
 
-.home-title, h2 {
+.home-title,
+h2,
+.banner-h1,
+.activity-text,
+.food-text-h3,
+.camp-text-h3 {
     color: #74C1E3;
     font-family: "Macondo", Brush Script MT, Trebuchet MS;
 }
 
- h4, .home-title {
+h4,
+.home-title {
     color: #089fe0;
- }
+}
 
 .home-title {
     font-size: 2.5em;
     margin-top: 10px;
 }
 
-.msg{
-    background-color:#E6E6D4;
+.msg {
+    background-color: #E6E6D4;
     padding: 35px;
     grid-column: 6/10;
     grid-row: 6/7;
@@ -153,21 +165,25 @@ main section img {
     padding-bottom: 15px;
 }
 
-.logo, .icon {
+.logo,
+.icon {
     width: 80px;
 }
 
 .icon {
     padding-top: 10px;
 }
+
 /* for the nav background hover color, I used the same background color
 but reduced the opacity a bit */
-nav a:hover, footer a:hover {
+nav a:hover,
+footer a:hover {
     background-color: #089fe0;
     color: white;
 }
 
-.book, .join {
+.book,
+.join {
     color: #EAF6F6;
     background-color: #FDC52D;
     border-radius: 5px;
@@ -176,7 +192,8 @@ nav a:hover, footer a:hover {
     margin-top: 50px;
 }
 
-.book:hover, .join:hover {
+.book:hover,
+.join:hover {
     background-color: #f7bf2593;
     color: black;
 }
@@ -204,7 +221,9 @@ footer .social img {
     padding-top: 15px;
 }
 
-.rivers-card, .camping-card, .rapids-card {
+.rivers-card,
+.camping-card,
+.rapids-card {
     margin: 200px 0;
 }
 
@@ -219,45 +238,259 @@ footer .social img {
     transform: scale(1.1);
 }
 
+/* the CSS for the Activity sub-page */
+#hero2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+#banner-video {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    margin: -100px;
+    z-index: -1;
+
+}
+
+.bg-video {
+    width: 100%;
+
+}
+
+.banner-text {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 1;
+    margin: 100px;
+
+}
+
+.banner-h1 {
+    font-size: 4rem;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+.activity-grid {
+    padding: 2rem;
+}
+
+.activity-text-box {
+    margin-top: 150px;
+}
+
+.activity-text,
+.camp-text-h3,
+.food-text-h3 {
+    font-size: 2.5rem;
+}
+
+.activity1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
+    gap: 20px;
+}
+
+.tent-img {
+    width: 100%;
+}
+
+.camp-tent {
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+.camp-text {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    margin-top: 15px;
+    padding: 20px;
+
+}
+
+.activity2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.food {
+    width: 100%;
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+
+.food-text {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    margin-top: 15px;
+    padding: 20px;
+}
+
+.cta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 100px;
+    background-color: #74C1E3;
+}
+
+.cta-text {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    margin: 25px;
+
+}
+
+.cta-button {
+    grid-column: 2/3;
+    grid-row: 1/3;
+
+}
+
+.cta-btn {
+    display: inline-block;
+    margin: 0 10px;
+
+}
+
+
+.subscribe {
+    color: #EAF6F6;
+    background-color: #0633108f;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+}
+
 
 @media screen and (max-width: 900px) {
-    #hero, .home-grid {
+
+    #hero,
+    .home-grid {
         display: block;
         height: auto;
     }
-    nav, footer {
+
+    nav,
+    footer {
         flex-direction: column;
     }
+
     nav a {
         display: block;
         padding: 15px;
     }
+
     #hero {
         margin-top: 0;
     }
+
     #hero-msg {
         margin-top: 0;
     }
+
     #hero-msg h4 {
         display: none;
     }
+
     .home-title {
         font-size: 25px;
         color: #6f7364;
     }
-    .rivers-card, .camping-card, .rapids-card { 
+
+    .rivers-card,
+    .camping-card,
+    .rapids-card {
         margin: 50px auto;
         width: 60%;
     }
+
     #background {
         display: none;
     }
-    .mountains, .msg {
+
+    .mountains,
+    .msg {
         width: 80%;
         display: block;
         margin: 0 auto;
     }
+
     footer {
         margin-top: 25px;
     }
+
+    /* Activity page media query */
+
+    /* #hero2 {
+        margin-top: 100px;
+    } */
+
+    #hero,
+    .activity1,
+    .activity2,
+    .cta {
+        display: block;
+    }
+
+    #hero {
+        position: relative;
+    }
+
+    .bg-video {
+        height: auto;
+        width: 100%;
+
+    }
+
+    .activity2 {
+        padding: 50px;
+    }
+
+    .food-pic {
+        width: 100%;
+    }
+
+    .banner-h1 {
+        font-size: 1.5rem;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1.5;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #banner-video {
+        width: 100%;
+        margin-top: 100px;
+        position: absolute;
+        left: 20%;
+        top: 18%;
+        
+    }
+
+    .activity-text,
+    .camp-text-h3,
+    .food-text-h3 {
+        font-size: 2rem;
+    }
+
+    .camp-text-h3,
+    .food-text-h3 {
+        margin-top: -10px;
+    }
+
+    .cta {
+        padding: 20px;
+    }
+
+   
 }
