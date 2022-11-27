@@ -1,0 +1,944 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Poppins&display=swap');
+
+/* COLORS 
+Primary: #002D13;
+Secondary: #FFC700;
+Accent-Color1: #005739;
+Accent-Color2: #A4D8AB;
+Accent-Color3: #F9FBF5;
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #002D13;
+    font-family: "Poppin", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: #777;
+}
+
+/* The Header Navigation Section */
+.responsive-nav {
+    display: none;
+}
+
+header {
+    background-color: #005739;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.5rem 5rem;
+
+}
+
+.logo-box {
+    margin: 1rem;
+}
+
+.logo-img {
+    width: 8rem;
+}
+
+.desktop-nav {
+    color: #F9FBF5;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .2s;
+
+}
+
+.desktop-nav:hover {
+    transform: scale(1.2);
+    border-bottom: .2rem solid #FFC700;
+}
+
+nav {
+    margin-left: 4rem;
+}
+
+.music {
+    margin-right: 5rem;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #eabb13d3;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-mute-button {
+    background-color: #A4D8AB;
+    border-radius: 2.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+/* The Hero Section */
+.hero-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    height: 50vh;
+    margin: 10rem 5rem;
+
+
+}
+
+.hero-text {
+    color: #F9FBF5;
+    font-family: "JetBrains Mono", Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+    font-weight: 400;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    text-align: left;
+    padding: 6rem 3rem 3rem;
+    line-height: 1.5;
+
+
+}
+
+h2 {
+    font-family: "JetBrains Mono", Arial, Helvetica, sans-serif;
+}
+
+.repository-icons {
+    background-color: #A4D8AB;
+    display: inline-block;
+    margin-top: 6rem;
+    transform: skewX(-11deg);
+}
+
+.hero-icon {
+    padding: 1.5rem;
+    transform: skewX(11deg);
+}
+
+.replit-icon {
+    width: 11rem;
+
+}
+
+.author {
+    color: #FFC700;
+
+}
+
+.hero-section .hero-text h2 {
+    animation: author-name 2s ease-out;
+}
+
+.job {
+    color: #FFC700;
+    text-transform: uppercase;
+    border-bottom: 5px solid #FFC700;
+
+}
+
+.job-title {
+    animation: animate-job 2s ease-out;
+}
+
+.hero-image-box {
+    background-image: url(../images/patternpad1.png);
+    grid-column: 2/5;
+    grid-row: 1/3;
+    position: relative;
+
+}
+
+.hero-img {
+    width: 100%;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* The About Me section */
+.about-section {
+    color: black;
+    background-color: #FFC700;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 2rem;
+    margin: 0 5rem;
+    gap: 3rem;
+
+
+}
+
+.author-img {
+    position: relative;
+    width: 100%;
+    padding: 5rem;
+}
+
+.blob {
+    overflow: hidden;
+    width: 50rem;
+    height: 50rem;
+    border-radius:
+        42% 56% 72% 28% / 42% 42% 56% 48%;
+    background-image: url(../images/WEB-1-4.jpg);
+    background-size: cover;
+    background-position: center;
+    animation: morph 3.75s linear infinite;
+    position: absolute;
+    left: 5rem;
+    top: 9rem;
+
+}
+
+.about-me-text {
+    padding: 5rem;
+}
+
+.about-me-header {
+    font-size: 3.5rem;
+    margin: 0 0 3.5rem;
+    letter-spacing: 4px;
+}
+
+.about-me-paragraph {
+    line-height: 1.5;
+    margin-bottom: 5rem;
+}
+
+.cv-btn:link,
+.cv-btn:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #A4D8AB;
+    color: #F9FBF5;
+    padding: 1.5rem 2.5rem;
+    display: inline-block;
+    transition: all .2s;
+    position: relative;
+
+
+
+}
+
+.cv-btn:hover {
+    transform: translateY(-.4rem);
+    box-shadow: 0 1rem 2rem #002d1395;
+}
+
+.cv-btn:active {
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem #002d1395;
+}
+
+.cv-btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background-color: #A4D8AB;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.cv-btn:hover::after {
+    transform: scaleX(1.3) scaleY(1.5);
+    opacity: 0;
+}
+
+
+/* My Services Section */
+.my-services-section {
+    width: 85%;
+    background-color: #A4D8AB;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0 4rem;
+    text-align: center;
+    margin: 10rem 5rem;
+    padding: 2rem;
+    transform: skewX(-10deg);
+    position: relative;
+    top: 0rem;
+    left: 3.5rem;
+    transform: translate(0 0);
+
+
+}
+
+.my-services-section>* {
+    transform: skewX(10deg);
+}
+
+.services-header {
+    color: black;
+    font-size: 3.5rem;
+    margin: 4rem 0 5rem;
+    letter-spacing: 4px;
+    grid-column: 1/7;
+    grid-row: 1/2;
+
+}
+
+.web-design-box {
+    grid-column: 1/3;
+    grid-row: 2/4;
+}
+
+.web-development-box {
+    grid-column: 3/5;
+    grid-row: 2/4;
+}
+
+.photography-box {
+    grid-column: 5/7;
+    grid-row: 2/4;
+}
+
+.service-caption {
+    color: black;
+    display: inline-block;
+    font-size: 3rem;
+    padding: 2rem;
+    text-transform: uppercase;
+}
+
+
+/* My Portfolio Section */
+.my-portfolio-section {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0 4rem;
+    align-items: center;
+    text-align: center;
+    margin: 0 5rem 10rem;
+    padding: 2rem;
+
+}
+
+.natours-project-box,
+.bootstrap-project-box,
+.whitewater-rafting-project-box {
+    height: 70rem;
+    width: 100%;
+    grid-row: 2/4;
+    margin-top: -10rem;
+    box-shadow: 0 3rem 2rem #005739, 0 -2rem 1rem #005739;
+
+}
+
+
+.natours-project-box {
+    grid-column: 1/3;
+}
+
+.bootstrap-project-box {
+    grid-column: 3/5;
+}
+
+.whitewater-rafting-project-box {
+    grid-column: 5/7;
+}
+
+.natours-screenshot-box,
+.bootstrap-screenshot-box,
+.whitewater-rafting-screenshot-box {
+    height: 23rem;
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+.natours-screenshot-box {
+    background-image: url(../images/natours-img.png);
+}
+
+.bootstrap-screenshot-box {
+    background-image: url(../images/bootstrap-img.png);
+}
+
+.whitewater-rafting-screenshot-box {
+    background-image: url(../images/whitewater-rafting-img.png);
+}
+
+.portfolio-header {
+    color: #F9FBF5;
+    font-size: 3.5rem;
+    letter-spacing: 4px;
+    grid-column: 1/7;
+    align-content: center;
+    margin-top: -10rem;
+    background-color: black;
+
+}
+
+.project-header {
+    display: block;
+    text-align: left;
+    font-size: 2.5rem;
+    margin: 5rem 0;
+    padding-left: 2rem;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.project-header:hover {
+    transform: scale(1.1);
+}
+
+.project-detail {
+    color: #F9FBF5;
+    width: 80%;
+    font-size: 2rem;
+    line-height: 1.5;
+    margin: 4rem auto;
+
+}
+
+.natours {
+    color: #6ECD93;
+}
+
+.bootstrap {
+    color: #F2A639;
+}
+
+.rafting {
+    color: #089FE0;
+}
+
+
+/* The Footer section */
+footer {
+    background-color: #005739;
+    display: flex;
+    margin: auto 5rem;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding: 1rem;
+
+
+}
+
+.copyright-box {
+    font-size: 1.5rem;
+}
+
+.footer-links {
+    margin: 1.5rem;
+
+}
+
+.big-icon {
+    width: 3rem;
+}
+
+.replit {
+    width: 7rem;
+}
+
+.footer-home-logo {
+    width: 7rem;
+}
+
+
+.services-header-text {
+    transition: all .2s;
+
+}
+
+.services-header-text:hover {
+    letter-spacing: 1px;
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba(black, .2);
+
+}
+
+.copyright-text {
+    color: #f8f8f8b2;
+}
+
+
+
+
+
+
+
+
+@keyframes author-name {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+
+    80% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes animate-job {
+    0% {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    80% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes morph {
+
+    0%,
+    100% {
+        border-radius:
+            42% 56% 72% 28% / 42% 42% 56% 48%;
+    }
+
+    33% {
+        border-radius: 72% 28% 48% 48% / 28% 28% 72% 72%;
+    }
+
+    66% {
+        border-radius: 0%100% 56% 56% 100% / 100% 100% 56% 56%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************** Media Query Section **********************/
+/*
+Screen Widths
+1em - 16px
+0 - 600px = 600/16 = 37.5em: Phone
+600-900px = 900/16 = 56.25em: Tablet Portrait 
+900-1200px = 1200/16 = 75em: Tablet Landscape
+1200-1800px: Normal styles
+1800px = 1800/16 = 112.5em: Big desktop
+*/
+
+
+@media only screen and (max-width: 75em) {
+    html {
+        font-size: 56.25%;
+    }
+
+    nav a:hover {
+        pointer-events: none;
+        transform: none;
+    }
+
+    .services-header-text:hover {
+        transform: none;
+        text-shadow: none;
+    }
+}
+
+@media only screen and (max-width: 56.25em) {
+    html {
+        font-size: 50%;
+    }
+
+    body {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    /* Disabling all over effects. */
+    nav a:hover {
+        pointer-events: none;
+        transform: none;
+    }
+
+    .services-header-text:hover {
+        transform: none;
+        text-shadow: none;
+    }
+
+    /* Changing the grid layout */
+    .hero-section,
+    .about-section,
+    .my-services-section,
+    .my-portfolio-section {
+        display: block;
+        margin-bottom: 15rem;
+    }
+
+    .hero-section {
+        margin-top: 20rem;
+    }
+
+    /* The Hero section query */
+    .hero-image-box {
+        height: 100%;
+        margin-top: -83rem;
+        z-index: -1;
+    }
+
+    .hero-text {
+        height: 100%;
+    }
+
+    .author,
+    .job {
+        background-color: #002D13;
+    }
+
+    .job-title {
+        margin-bottom: 5rem;
+    }
+
+    /* The About-me section query */
+    .about-section {
+        text-align: center;
+
+    }
+
+    .about-me-header {
+        font-size: 4.5rem;
+    }
+
+    .blob {
+        width: 55rem;
+        height: 55rem;
+        position: static;
+        margin: 0 auto;
+
+    }
+
+    /* Services */
+    .my-services-section {
+        transform: none;
+        margin-bottom: 25rem;
+
+    }
+
+    .my-services-section>* {
+        transform: none;
+    }
+
+    .service-caption {
+        font-size: 4rem;
+        padding: 3rem;
+        margin: 2rem;
+    }
+
+    .web-design-box,
+    .web-development-box,
+    .photography-box {
+        width: 50rem;
+        margin: 0 auto 5rem;
+        border: 1px solid #002D13;
+        box-shadow: 0 1px 5px #002d1395;
+
+    }
+
+    /* Portfolio section query */
+    /* .my-portfolio-section {
+        aspect-ratio: 1/1;
+    } */
+
+    .natours-project-box,
+    .bootstrap-project-box,
+    .whitewater-rafting-project-box {
+        width: 50rem;
+        height: 100rem;
+        margin: 8rem auto 14rem;
+    }
+
+    .natours-screenshot-box,
+    .bootstrap-screenshot-box,
+    .whitewater-rafting-screenshot-box {
+        height: 50%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .natours,
+    .bootstrap,
+    .rafting {
+        font-size: 3.5rem;
+        padding-top: 2rem;
+
+    }
+
+    .project-header {
+
+        text-align: center;
+
+
+    }
+
+    .project-detail,
+    .about-me-paragraph {
+        font-size: 2.5rem;
+    }
+
+    .project-detail {
+        margin-top: 5rem;
+        width: inherit;
+
+    }
+
+    .my-portfolio-section {
+        margin-bottom: 10rem;
+    }
+
+    /* Building the  responsive navigation */
+    header {
+        display: none;
+    }
+
+    .responsive-nav {
+        display: inline-block;
+        position: relative;
+    }
+
+    .responsive-navigation {
+        height: 100vh;
+        width: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        opacity: 0;
+        transition: all .8s cubic-bezier(1, -0.09, 0.29, 1.1);
+        
+    }
+
+    .nav-checkbox {
+        display: none;
+    }
+
+    .nav-btn {
+        background-color: #FFC700;
+        height: 9rem;
+        width: 9rem;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        border-radius: 50%;
+        text-align: center;
+        z-index: 3;
+
+    }
+
+    .nav-background {
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        background-image: radial-gradient(#005739, #048155d1);
+        z-index: 1;
+        transition: transform 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        
+
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-item {
+        margin: 3rem;
+    }
+
+    .nav-link:link,
+    :visited {
+        display: inline-block;
+        font-size: 3rem;
+        font-weight: 3000;
+        color: #F9FBF5;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-image: linear-gradient(120deg, #A4D8AB 0%,
+                #A4D8AB 50%, #F9FBF5 50%);
+        background-size: 220%;
+        transition: all .4s;
+    }
+
+    .nav-link:hover,
+    :active {
+        background-position: 100%;
+        color: black;
+
+    }
+
+    .music {
+        margin: 0 auto;
+        padding: 1rem 2;
+    }
+
+    .nav-checkbox:checked~.nav-background {
+        transform: scale(80);
+    }
+
+    .nav-checkbox:checked~.responsive-navigation {
+        opacity: 1;
+        width: 100%;
+    }
+
+    /* The Icon styling */
+    .nav-icon {
+        position: relative;
+        margin-top: 4.5rem;
+    }
+
+    .nav-icon,
+    .nav-icon::before,
+    .nav-icon::after {
+        width: 3.5rem;
+        height: 3px;
+        background-color: black;
+        display: inline-block;
+    }
+
+    .nav-icon::before,
+    .nav-icon::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all .2s;
+    }
+
+    .nav-icon::before {top: -1rem;}
+    .nav-icon::after {top: 1rem;}
+
+
+    .nav-checkbox:checked + .nav-btn .nav-icon {
+        background-color: transparent;
+    }
+
+    .nav-checkbox:checked + .nav-btn .nav-icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    .nav-checkbox:checked + .nav-btn .nav-icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+
+    .responsive-nav .logo-box .logo-img {
+        width: 10rem;
+    }
+
+    .responsive-nav .logo-box {
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+        transform: translate(-3%, -3%);
+    }
+
+
+}
+
+@media only screen and (max-width: 37.5em) {
+    html {
+        font-size: 50%;
+    }
+
+    nav a:hover {
+        pointer-events: none;
+        transform: none;
+    }
+
+    .services-header-text:hover {
+        transform: none;
+        text-shadow: none;
+    }
+
+   
+    .greetings, .author, .job-title {
+        font-size: 4.5rem;
+    }
+
+    .hero-icon {
+        width: 7rem;
+    }
+
+    /* .replit-icon {
+        width: 8rem;
+    } */
+
+    footer {
+        display: inline-block;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 3rem 0;
+    }
+
+}
+
+@media only screen and (min-width: 112.5em) {
+    html {
+        font-size: 75%;
+    }
+
+    body {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    /* .blob {
+        top: 3rem;
+        left: 20rem;
+        margin: 0 auto;
+
+    } */
+}
