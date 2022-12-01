@@ -31,13 +31,17 @@ body {
     display: none;
 }
 
-header {
+header, .gallery-header {
     background-color: #005739;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 2.5rem 5rem;
 
+}
+
+.gallery-header {
+    margin-bottom: 8rem;
 }
 
 .logo-box {
@@ -436,7 +440,7 @@ footer {
     margin: auto 5rem;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 3rem;
+    margin: 10rem 0 3rem;
     padding: 1rem;
 
 
@@ -444,6 +448,7 @@ footer {
 
 .copyright-box {
     font-size: 1.5rem;
+    
 }
 
 .footer-links {
@@ -537,12 +542,39 @@ footer {
 }
 
 
+/* The Gallery section CSS */
+.gallery-body {
+    background-color: #A4D8AB;
+    
+}
 
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+    gap: 20px;
+    max-width: 1250px;
+    margin: 0 auto;
+}
 
+.photos {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
+.vertical-flow {
+    grid-row: span 2;
+}
 
-
-
+.horizontal-flow {
+    grid-column: span 2;
+}
+.big-flow {
+    grid-column: span 2;
+    grid-row: span 2;
+}
 
 
 
@@ -730,7 +762,7 @@ Screen Widths
     }
 
     /* Building the  responsive navigation */
-    header {
+    header, .gallery-header {
         display: none;
     }
 
@@ -923,6 +955,21 @@ Screen Widths
         padding: 3rem 0;
     }
 
+}
+
+@media only screen and (max-width: 560px) {
+    .vertical-flow {
+        grid-row: span 1;
+    }
+
+    .horizontal-flow {
+        grid-column: span 1;
+    }
+
+    .big-flow {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
 }
 
 @media only screen and (min-width: 112.5em) {
