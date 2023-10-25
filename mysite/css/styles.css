@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Poppins&display=swap');
+
+/* COLORS 
+Primary: #002D13;
+Secondary: #FFC700;
+Accent-Color1: #005739;
+Accent-Color2: #A4D8AB;
+Accent-Color3: #F9FBF5;
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #002D13;
+    font-family: "Poppin", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: #777;
+}
+
+/* The Header Navigation Section */
+header {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 5rem;
+    
+}
+
+.logo-box {
+    margin: 1rem;
+}
+
+.logo-img {
+    width: 8rem;
+}
+
+header nav a {
+    color: #F9FBF5;
+    display: inline-block;
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+nav {
+    margin-left: 4rem;
+}
+
+.music {
+    margin-right: 5rem;
+}
+
+
+/* The Hero Section */
+.hero-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    height: 50vh;
+    margin: 8rem 5rem 5rem;
+}
+
+.hero-text {
+    color:#F9FBF5;
+    font-family: "JetBrains Mono", Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+    font-weight: 400;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    margin: 1rem;
+    padding: 3rem;
+    line-height: 1.5;
+}
+
+.repository-icons {
+    margin-top: 6rem;
+}
+
+.replit-icon {
+    width: 11rem;
+}
+
+.author {
+    color: #FFC700;
+    
+}
+
+.hero-section .hero-text h2 {
+    animation: author-name 2s ease-out;
+}
+
+.job {
+    color: #FFC700;
+    text-transform: uppercase;
+    border-bottom: 5px solid #FFC700;
+    
+}
+
+.job-title{
+    animation: animate-job 2s ease-out;
+}
+
+.hero-image-box {
+    background-image: url(../images/patternpad1.png);
+    grid-column: 2/5;
+    grid-row: 1/3;
+    position: relative;
+   
+}
+
+.hero-img {
+    width: 100%;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* The About Me section */
+.about-section {
+    color: black;
+    background-color: #FFC700;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 2rem;
+    margin: 0 5rem;
+    gap: 5rem;
+
+    
+}
+
+.author-img {
+    width: 100%;
+    padding: 5rem;
+}
+
+.blob {
+    overflow: hidden;
+    width: 70rem;
+    height: 70rem;
+    border-radius: 
+    42% 56% 72% 28% / 42% 42% 56% 48%;
+    background-image: url(../images/WEB-1-4.jpg);
+    background-size: cover;
+    background-position: center;
+    animation: morph 3.75s linear infinite;
+    
+}
+
+.about-me-text {
+    padding: 5rem;
+}
+
+.about-me-header {
+    font-size: 3.5rem;
+    margin-bottom: 10rem;
+}
+
+.about-me-paragraph {
+    line-height: 1.5;
+    margin-bottom: 5rem;
+}
+
+
+
+
+
+
+
+
+@keyframes author-name {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+
+    80%{
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes animate-job {
+    0% {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    80%{
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes morph {
+    0%, 100% {
+        border-radius: 
+        42% 56% 72% 28% / 42% 42% 56% 48%;
+    }
+    33% {
+        border-radius: 72% 28% 48% 48% / 28% 28% 72% 72%;
+    }
+    66% {
+        border-radius: 0%100% 56% 56% 100% / 100% 100% 56% 56%;
+    }
+}
